@@ -1,0 +1,18 @@
+.inputcolor{
+    padding: 3;
+    background-color:lightblue;
+    border: green;
+}
+.two{
+    text-shadow: lightgreen;
+    text-align: center;
+}
+.three{
+    padding: 10;
+     
+    margin: 10;
+}
+.one{
+text-align: center;
+display: inline-block;
+}
