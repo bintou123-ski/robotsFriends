@@ -4,6 +4,7 @@ import users from "./users";
 import "./robots.css";
 import SearchBar from "./SearchBar";
 
+
 class App extends Component {
   state = { 
     users:users,
@@ -15,17 +16,23 @@ console.log(e.target.value)
 this.setState({searchField:e.target.value})
    }
   render() { 
+    const Filteredusers=users.filter(user=>{
+      return user.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+    });
     return ( 
-      <div className="one">
+      <div>
+         <div className="one">
            <h2>Robots Friends</h2>
          <input className="inputcolor" type="text"  value={this.state.searchField}
       onChange={this.onSearchBar}/>
       
        <div className="three">
-       <CardList  users={this.state.users}/>
+       <CardList  users={Filteredusers}/>
        </div>
         
     </div>
+      </div>
+     
      );
   }
 }

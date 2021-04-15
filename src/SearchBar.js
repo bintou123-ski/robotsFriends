@@ -1,6 +1,8 @@
 import React, { Component,setState } from 'react';
 
+
 const SearchBar=({onSearchBar}) =>{
+
   return (
     <div className="two">
              
