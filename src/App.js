@@ -5,6 +5,7 @@ import "./robots.css";
 import SearchBar from "./SearchBar";
 
 
+
 class App extends Component {
   state = { 
     users:users,
@@ -22,10 +23,11 @@ this.setState({searchField:e.target.value})
     return ( 
       <div>
          <div className="one">
-           <h2>Robots Friends</h2>
-         <input className="inputcolor" type="text"  value={this.state.searchField}
+           <h1>Robots Friends</h1>
+           <input className="inputcolor" type="text"  value={this.state.searchField}
       onChange={this.onSearchBar}/>
-      
+      <div>&nbsp;</div>
+        
        <div className="three">
        <CardList  users={Filteredusers}/>
        </div>
